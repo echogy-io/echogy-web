@@ -3,7 +3,9 @@ import { createClient } from "@/utils/supabase/server";
 import { InfoIcon } from "lucide-react";
 import { redirect } from "next/navigation";
 
-export default async function ProtectedPage() {
+export const runtime = 'edge';
+
+export default async function Protected() {
   const supabase = await createClient();
 
   const {

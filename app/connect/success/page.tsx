@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button'
 import { CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
 
+export const runtime = 'edge';
+
 type PageProps = {
   params: Promise<{}>
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>

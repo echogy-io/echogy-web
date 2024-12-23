@@ -6,9 +6,13 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { SmtpMessage } from "../smtp-message";
 
-export default async function ForgotPassword(props: {
+export const runtime = 'edge';
+
+interface PageProps {
   searchParams: Promise<Message>;
-}) {
+}
+
+export default async function ForgotPassword(props: PageProps) {
   const searchParams = await props.searchParams;
   return (
     <>
