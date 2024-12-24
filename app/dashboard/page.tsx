@@ -1,12 +1,9 @@
-'use client';
-
+'use client'
 import { Network, Terminal, History, Activity, DollarSign, Users, ShoppingCart, UserPlus } from 'lucide-react';
 import { StatCard } from './components/stat-card';
 import { RecentSales } from './components/recent-sales';
 import { MetricCard } from './components/metric-card';
 
-import { createClient } from '@/utils/supabase/server'
-import { redirect } from 'next/navigation'
 
 export const runtime = 'edge';
 
@@ -48,7 +45,7 @@ const recentSales = [
   }
 ];
 
-export default async function Dashboard() {
+export default function Dashboard() {
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">

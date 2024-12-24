@@ -1,6 +1,7 @@
 import { signUpAction, signInWithGithub } from "@/app/actions";
 import { Message } from "@/components/form-message";
-import { AuthFormClient } from "@/components/auth/auth-form-client";
+import {AuthFormClient} from "@/components/auth/auth-form-client";
+
 
 export const runtime = 'edge';
 

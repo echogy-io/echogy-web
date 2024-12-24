@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import { Message } from "@/components/form-message";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -26,10 +25,10 @@ export function AuthFormClient({
 }: AuthFormClientProps) {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleGithubLogin = async () => {
+  const handleGithubLogin = () => {
     try {
       setIsLoading(true);
-      await signInWithGithub();
+      signInWithGithub();
     } catch (error) {
       console.error('GitHub login error:', error);
     } finally {
@@ -37,16 +36,16 @@ export function AuthFormClient({
     }
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
     
     try {
       const formData = new FormData(event.currentTarget);
       if (type === 'sign-in') {
-        await signInAction(formData);
+         signInAction(formData);
       } else if (signUpAction) {
-        await signUpAction(formData);
+        signUpAction(formData);
       }
     } catch (error) {
       console.error('Form submission error:', error);

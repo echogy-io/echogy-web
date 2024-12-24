@@ -24,13 +24,8 @@ interface SidebarProps {
     className?: string
 }
 
-export function Sidebar({
-                            navigation,
-                            footer,
-                            className
-                        }: SidebarProps) {
+export function Sidebar({navigation, footer, className}: SidebarProps) {
     const pathname = usePathname()
-
     const SidebarContent = (
         <aside className={cn(
             "flex h-full flex-col bg-background border-r",
